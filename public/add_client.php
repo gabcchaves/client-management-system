@@ -6,7 +6,7 @@
 <html>
 	<body>
 		<!-- Reusable navbar -->
-		<?= require 'navbar.html'; ?>
+		<?= require 'navbar.php'; ?>
 
 		<div class="container">
 			<div class="form-container">
