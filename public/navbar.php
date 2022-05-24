@@ -12,9 +12,8 @@
 	<div class="navbar-area">
 		<nav>
 			<ul>
-				<li><a href="#">Adicionar</a></li>
-				<li><a href="#">Editar</a></li>
-				<li><a href="#">Remover</a></li>
+				<li><a href="add_client.php">Adicionar</a></li>
+				<li><a href="index.php">Listar</a></li>
 			</ul>
 		</nav>
 	</div>
