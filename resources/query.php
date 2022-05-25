@@ -16,20 +16,27 @@ function get_user_list() {
 		die("Conexão falhou: ". $mysqli->connect_error);
 	}
 
-	$sql = "SELECT * FROM test";
-	$user_list = $mysqli->query($sql);
+	$sql = "SELECT * FROM Clients";
+	$query = $mysqli->query($sql);
 
-	if ($user_list->num_rows > 0) {
-		while ($row = $user_list->fetch_assoc()) {
-			echo "Name: " . $row["name"] . "<br>";
+	if ($query->num_rows > 0) {
+		$user_list = array();
+		while ($row = $query->fetch_assoc()) {
+			array_push($user_list, array($row["Name"], $row["Email"], $row["Phone"]));
 		}
-	} else {
-		echo "Sem dados.";
+
+		// Close connection
+		$mysqli->close();
+
+		return $user_list;
 	}
 
+	// Close connection
+	$mysqli->close();
 }
 
-get_user_list();
+$user_list = get_user_list();
+return $user_list;
 
 // EOF
 
