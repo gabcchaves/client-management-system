@@ -2,28 +2,30 @@
 /* This script is supposed query registered clients and return them to the
  * frontend as an array */
 
-class UserList {
-	// I have little experience... This my be weird, but I'm trying to make it
-	// safer.
-	private $conf = require '../resources/config.php';
-	
-	public static function get_user_list() {
-		// Make database connection
+function get_user_list() {
+	$conf = require '../resources/config.php';
+	// Try to connect to database
+	try {
 		$mysqli = new mysqli(
-			__CLASS__::$conf["db"]["host"],
-			__CLASS__::$conf["db"]["username"],
-			__CLASS__::$conf["db"]["password"],
-			__CLASS__::$conf["db"]["dbname"]
+			$conf["db"]["host"],
+			$conf["db"]["username"],
+			$conf["db"]["password"],
+			$conf["db"]["dbname"]
 		);
 
-		// Query User
-		$user_list = $mysqli->host_info;
-		return $user_list;
+		// Query the user list
+		$user_list = $mysqli->query("SELECT * FROM test;");
+
+		echo $user_list;
+
+		// Close connection
+		mysqli_close($mysqli);
+	} catch (mysqli_sql_exception $error) {
+		return $error;
 	}
 }
 
-/* echo "<h1>" . $config["db"]["dbname"] . "</h1>"; */
-echo UserList::get_user_list();
+get_user_list();
 
 // EOF
 
