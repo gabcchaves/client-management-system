@@ -11,5 +11,7 @@ $config = array(
 	)
 );
 
+return $config;
+
 // EOF
 
