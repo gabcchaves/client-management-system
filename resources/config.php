@@ -4,7 +4,7 @@
 
 $config = array(
 	"db" => array(
-		"dbname" => "client-database",
+		"dbname" => "client_database",
 		"username" => "foobar",
 		"password" => "foobar",
 		"host" => "localhost"
