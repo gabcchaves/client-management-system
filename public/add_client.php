@@ -30,7 +30,7 @@
 							<label for="client_phone">Telefone:</label><br>
 							<input name="client_phone" id="client_phone" type="tel">
 						</div>
-						<input type="submit" value="Adicionar">
+						<input type="submit" value="Adicionar" class="button-dark">
 					</form>
 				</div>
 			</div>			
