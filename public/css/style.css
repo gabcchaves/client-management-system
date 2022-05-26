@@ -14,10 +14,12 @@ html, body {
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	display: flex;
 	background-color: var(--page-bg);
 	font-family: 'Fira Sans';
 	font-size: 14pt;
+	display: flex;
+	flex-flow: column;
+	color: var(--dark-indigo);
 }
 .link-light {
 	color: white;
@@ -42,13 +44,24 @@ html, body {
 }
 .button-light, .button-dark {
 	transition: 0.3s;
+	font-size: 14pt;
 }
 .button-light:hover {
 	background-color: var(--dark-indigo);
 	color: white;
+	cursor: pointer;
 }
 .button-dark:hover {
 	background-color: white;
+	color: var(--dark-indigo);
+	cursor: pointer;
+}
+input {
+	font-size: 14pt;
+	border: 1px solid var(--dark-indigo);
+}
+input[type=text], input[type=email], input[type=tel] {
+	background-color: var(--page-bg);
 	color: var(--dark-indigo);
 }
 
@@ -62,6 +75,7 @@ html, body {
 	align-items: center;
 	justify-content: space-between;
 	box-shadow: 0 2px 2px darkgray;
+	flex: 0 1 auto;
 }
 
 #reusable-header .logo-area {
@@ -73,4 +87,60 @@ html, body {
 }
 #reusable-header .options li {
 	display: inline;
+}
+
+/* Add client */
+#add-client-page .main-content {
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: center;
+}
+
+#add-client-page .main-content .card {
+	width: 30%;
+	height: 80%;
+	margin-top: 5%;
+	border: 1px solid var(--dark-indigo);
+	box-shadow: 2px 2px 2px lightgray, -2px -2px 2px lightgray;
+	background-color: white;
+	display: flex;
+	flex-flow: column;
+}
+
+#add-client-page .main-content .form-info {
+	flex: 0 1 auto;
+	display: flex;
+	justify-content: center;
+}
+
+#add-client-page .main-content .form-container {
+	flex: 1 1 auto;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+#add-client-page .main-content .form-container form {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+#add-client-page .main-content .form-container form div,
+#add-client-page .main-content .form-container form input[type=submit] {
+	width: 80%;
+	margin: 1vmin 0;
+}
+
+#add-client-page .main-content .form-container input[type=text],
+#add-client-page .main-content .form-container input[type=email],
+#add-client-page .main-content .form-container input[type=tel] {
+	height: 3vmax;
+	width: 100%;
+}
+
+#add-client-page .main-content .form-container input[type=submit] {
+	width: 100%;
+	height: 4vmax;
 }
