@@ -1,0 +1,76 @@
+/* Imports */
+@import url('http://fonts.cdnfonts.com/css/fira-sans');
+
+/* Variables */
+:root {
+	--page-bg: rgba(240, 220, 220);
+	--light-indigo: rgba(91, 87, 225, 0.8);
+	--dark-indigo: rgba(65, 62, 155, 1);
+}
+
+/* Reset */
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	background-color: var(--page-bg);
+	font-family: 'Fira Sans';
+	font-size: 14pt;
+}
+.link-light {
+	color: white;
+	text-decoration: none;
+}
+.link-dark {
+	color: var(--dark-indigo);
+}
+.link-light, .link-dark {
+	transition: 0.3s;
+}
+.link-light:hover {
+	text-shadow: 1px 1px 1px lightcyan, -1px -1px 1px lightcyan;
+}
+.button-light {
+	background-color: white;
+	color: var(--dark-indigo);
+}
+.button-dark {
+	background-color: var(--dark-indigo);
+	color: white;
+}
+.button-light, .button-dark {
+	transition: 0.3s;
+}
+.button-light:hover {
+	background-color: var(--dark-indigo);
+	color: white;
+}
+.button-dark:hover {
+	background-color: white;
+	color: var(--dark-indigo);
+}
+
+
+/* Header */
+#reusable-header {
+	background-color: var(--light-indigo);
+	width: 100%;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0 2px 2px darkgray;
+}
+
+#reusable-header .logo-area {
+	padding-left: 2%;
+} 
+#reusable-header .options {
+	padding-right: 2%;
+	font-size: 18pt;
+}
+#reusable-header .options li {
+	display: inline;
+}
