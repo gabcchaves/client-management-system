@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <div id="reusable-header">
 	<div class="logo-area">
-		<h1><a href="link-light">Gerenciamento de clientes</a></h1>
+		<h1><a href="#" class="link-light">Gerenciamento de clientes</a></h1>
 	</div>
 	
 	<div class="options">
