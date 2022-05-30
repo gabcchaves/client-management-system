@@ -17,7 +17,7 @@
 				</div>
 				
 				<div class="form-container">
-					<form action="" method="POST">
+					<form action="../controller/add.php" method="POST">
 						<div class="input-group">
 							<label for="client_name">Nome:</label><br>
 							<input name="client_name" id="client_name" type="text">
