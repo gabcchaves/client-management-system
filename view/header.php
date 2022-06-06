@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <head>
-	<link rel="stylesheet" href="/view/css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <div id="reusable-header">
